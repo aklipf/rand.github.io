@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>rand() blog - zola</title>
+    <link href="https://blog.astrid-klipfel.net/tags/zola/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://blog.astrid-klipfel.net"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-20T00:00:00+00:00</updated>
+    <id>https://blog.astrid-klipfel.net/tags/zola/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Zola vs Jekyll</title>
+        <published>2024-08-20T00:00:00+00:00</published>
+        <updated>2024-08-20T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://blog.astrid-klipfel.net/blog/zola-vs-jekyll/" type="text/html"/>
+        <id>https://blog.astrid-klipfel.net/blog/zola-vs-jekyll/</id>
+        
+        <content type="html">&lt;p&gt;I have been using &lt;a href=&quot;https:&#x2F;&#x2F;jekyllrb.com&#x2F;&quot;&gt;Jekyll&lt;&#x2F;a&gt; for all my projects for years. I always hated web development and never really had a serious project, but developing small web projects with Jekyll&#x27;s template system was fun. I loved playing with the templates, customising them and sharing my creations with other people online. &lt;&#x2F;p&gt;
+&lt;p&gt;Despite the fun of playing around with the Jekyll template system, I started new projects with more serious goals like a professional website. Jekyll was nice to start with, but in the long run I got more and more frustrated with &lt;a href=&quot;https:&#x2F;&#x2F;www.ruby-lang.org&#x2F;en&#x2F;&quot;&gt;Ruby&lt;&#x2F;a&gt;. In fact, I&#x27;ve never used Ruby, and I don&#x27;t know the Ruby toolchains very well. But every time I tried to add content to my website and installed the Ruby toolchains, Jekyll was broken for several reasons, but &lt;a href=&quot;https:&#x2F;&#x2F;rubygems.org&#x2F;&quot;&gt;RubyGems&lt;&#x2F;a&gt; and version control was one of them. It&#x27;s probably a skill issue, as I didn&#x27;t understand Ruby very well, but in my opinion a nice and easy to use package manager is very convenient for doing simple projects when you don&#x27;t have a lot of time.&lt;&#x2F;p&gt;
+&lt;p&gt;One day I got tired of spending time on stackoverflow every time I wanted to install Jekyll properly and started looking for an alternative. I&#x27;d been interested in Rust for a while and saw a lot of web projects that used Rust at some point in the project. I was also learning the Rust language and had done some small projects with it. I was not very experienced, but I was very excited about using Rust for web development. I even did some experiments with &lt;a href=&quot;https:&#x2F;&#x2F;rustwasm.github.io&#x2F;docs&#x2F;book&#x2F;&quot;&gt;Rust and web assembly&lt;&#x2F;a&gt; to render a particle system in a &lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Web&#x2F;API&#x2F;Canvas_API&quot;&gt;Canvas&lt;&#x2F;a&gt;. Then I discovered &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt;, an alternative to Jekyll developed in Rust.&lt;&#x2F;p&gt;
+&lt;p&gt;I have had a great experience with Zola. The installation process was flawless compared to Jekyll. Zola also has comparable features to Jekyll and was really fast. Finally, Zola is easy to build and deploy using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;shalzz&#x2F;zola-deploy-action&quot;&gt;github actions&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;pages.github.com&#x2F;&quot;&gt;github pages&lt;&#x2F;a&gt;. I spent some time refactoring my site to use Zola instead of Jekyll. It took me a while to reproduce a Jekyll template that I really liked, but I gained a lot of experience with &lt;a href=&quot;https:&#x2F;&#x2F;sass-lang.com&#x2F;&quot;&gt;SASS&lt;&#x2F;a&gt; and was also helped to build a &lt;a href=&quot;https:&#x2F;&#x2F;www.w3schools.com&#x2F;html&#x2F;html_responsive.asp&quot;&gt;responsive&lt;&#x2F;a&gt; template. As a result, my site is very lightweight, quick to build and doesn&#x27;t include a &lt;a href=&quot;https:&#x2F;&#x2F;www.freecodecamp.org&#x2F;news&#x2F;what-you-should-know-about-web-tracking-and-how-it-affects-your-online-privacy-42935355525&#x2F;&quot;&gt;tracker&lt;&#x2F;a&gt; like Google Analytics. I ended up spending a lot of time on it, but I think it was worth it because now it is very convenient to update and create websites. I also learn about interesting topics.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

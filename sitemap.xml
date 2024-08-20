@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://blog.astrid-klipfel.net/</loc>
+    </url>
+    <url>
+        <loc>https://blog.astrid-klipfel.net/blog/</loc>
+    </url>
+    <url>
+        <loc>https://blog.astrid-klipfel.net/blog/c-circle/</loc>
+        <lastmod>2024-07-31</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.astrid-klipfel.net/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://blog.astrid-klipfel.net/blog/zola-vs-jekyll/</loc>
+        <lastmod>2024-08-20</lastmod>
+    </url>
+    <url>
+        <loc>https://blog.astrid-klipfel.net/tags/</loc>
+    </url>
+    <url>
+        <loc>https://blog.astrid-klipfel.net/tags/c/</loc>
+    </url>
+    <url>
+        <loc>https://blog.astrid-klipfel.net/tags/obfuscated/</loc>
+    </url>
+    <url>
+        <loc>https://blog.astrid-klipfel.net/tags/rust/</loc>
+    </url>
+    <url>
+        <loc>https://blog.astrid-klipfel.net/tags/zola/</loc>
+    </url>
+</urlset>
