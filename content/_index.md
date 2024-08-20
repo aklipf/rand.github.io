@@ -13,7 +13,7 @@ Currently the latest post is [Zola vs Jekyll](./blog/zola-vs-jekyll)
 
 - [C](./tags/c)
 - [Rust](./tags/rust)
-- [Obfuscated](./tags/c)
+- [Obfuscated](./tags/obfuscated)
 
 ### More 👀
 
