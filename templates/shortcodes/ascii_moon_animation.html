@@ -1,0 +1,22 @@
+<pre id="ascii-moon-anim" style="font-size: 0.6em; line-height: 1.2; overflow: visible; white-space: pre;">Loading...</pre>
+<script type="module">
+  import { getMoonState, renderMoon } from 'https://esm.sh/ascii-side-of-the-moon';
+
+  const el = document.getElementById('ascii-moon-anim');
+  const FRAME_COUNT = 30;
+  const FRAME_MS = 150;
+  const LUNAR_CYCLE_MS = 29.5 * 24 * 60 * 60 * 1000;
+
+  const now = new Date();
+  const frames = Array.from({ length: FRAME_COUNT }, (_, i) => {
+    const date = new Date(now.getTime() + (i / FRAME_COUNT) * LUNAR_CYCLE_MS);
+    return renderMoon(getMoonState(date));
+  });
+
+  el.textContent = frames[0];
+  let frame = 0;
+  setInterval(() => {
+    frame = (frame + 1) % frames.length;
+    el.textContent = frames[frame];
+  }, FRAME_MS);
+</script>

@@ -1,0 +1,10 @@
+<pre id="ascii-moon" style="font-size: 0.6em; line-height: 1.2; overflow: visible; white-space: pre;">Loading...</pre>
+<script type="module">
+  import { getMoonState, renderMoon } from 'https://esm.sh/ascii-side-of-the-moon';
+  const el = document.getElementById('ascii-moon');
+  try {
+    el.textContent = renderMoon(getMoonState(new Date()));
+  } catch (e) {
+    el.textContent = 'Failed to render moon.';
+  }
+</script>
