@@ -7,13 +7,13 @@ I'm Asteri, this is a simple blog about random ideas I have in my head. I'm inte
 
 ### Check out the latest post 🔥
 
-Currently the latest post is [Zola vs Jekyll](./blog/zola-vs-jekyll)
+Currently the latest post is [Moon phase ASCII art](./blog/ascii-moon)
 
 ### Browse the blog by tags 📡
 
 - [C](./tags/c)
 - [Rust](./tags/rust)
-- [Obfuscated](./tags/obfuscated)
+- [ASCII art](./tags/ascii-art)
 
 ### More 👀
 
