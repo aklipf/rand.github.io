@@ -1,0 +1,10 @@
+{% set lines = load_data(path=path) | split(pat="\n") %}
+<div class="ascii-art center">
+{% for line in lines %}
+  <div>
+  {% for c in line%}
+    <span>{{ c | safe }}</span>
+  {% endfor %}
+  </div>
+{% endfor %}
+</div>
