@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>rand() blog - ASCII art</title>
+    <link rel="self" type="application/atom+xml" href="https://blog.astrid-klipfel.fr/tags/ascii-art/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.astrid-klipfel.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-05-31T00:00:00+00:00</updated>
+    <id>https://blog.astrid-klipfel.fr/tags/ascii-art/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Moon phase ASCII art</title>
+        <published>2026-05-31T00:00:00+00:00</published>
+        <updated>2026-05-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.astrid-klipfel.fr/blog/ascii-moon/"/>
+        <id>https://blog.astrid-klipfel.fr/blog/ascii-moon/</id>
+        
+        <content type="html" xml:base="https://blog.astrid-klipfel.fr/blog/ascii-moon/">&lt;p&gt;I like astronomy and ASCII art and there is a perfect project that combines the two! Let&#x27;s introduce &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aleyan&#x2F;ascii-side-of-the-moon&quot;&gt;ascii-side-of-the-moon&lt;&#x2F;a&gt;, a cool project that allows you to render an ASCII representation of the current moon phase. Here is a short animation of the full cycle:&lt;&#x2F;p&gt;
+&lt;pre id=&quot;ascii-moon-anim&quot; style=&quot;font-size: 0.6em; line-height: 1.2; overflow: visible; white-space: pre;&quot;&gt;Loading...&lt;&#x2F;pre&gt;
+&lt;script type=&quot;module&quot;&gt;
+  import { getMoonState, renderMoon } from &#x27;https:&#x2F;&#x2F;esm.sh&#x2F;ascii-side-of-the-moon&#x27;;
+
+  const el = document.getElementById(&#x27;ascii-moon-anim&#x27;);
+  const FRAME_COUNT = 30;
+  const FRAME_MS = 150;
+  const LUNAR_CYCLE_MS = 29.5 * 24 * 60 * 60 * 1000;
+
+  const now = new Date();
+  const frames = Array.from({ length: FRAME_COUNT }, (_, i) =&gt; {
+    const date = new Date(now.getTime() + (i &#x2F; FRAME_COUNT) * LUNAR_CYCLE_MS);
+    return renderMoon(getMoonState(date));
+  });
+
+  el.textContent = frames[0];
+  let frame = 0;
+  setInterval(() =&gt; {
+    frame = (frame + 1) % frames.length;
+    el.textContent = frames[frame];
+  }, FRAME_MS);
+&lt;&#x2F;script&gt;
+&lt;h3 id=&quot;how-to-use-it&quot;&gt;How to use it?&lt;&#x2F;h3&gt;
+&lt;p&gt;In a bash terminal:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code data-lang=&quot;bash&quot;&gt;curl -s &amp;quot;https:&#x2F;&#x2F;aleyan.com&#x2F;projects&#x2F;ascii-side-of-the-moon&amp;quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Result:&lt;&#x2F;p&gt;
+&lt;pre id=&quot;ascii-moon&quot; style=&quot;font-size: 0.6em; line-height: 1.2; overflow: visible; white-space: pre;&quot;&gt;Loading...&lt;&#x2F;pre&gt;
+&lt;script type=&quot;module&quot;&gt;
+  import { getMoonState, renderMoon } from &#x27;https:&#x2F;&#x2F;esm.sh&#x2F;ascii-side-of-the-moon&#x27;;
+  const el = document.getElementById(&#x27;ascii-moon&#x27;);
+  try {
+    el.textContent = renderMoon(getMoonState(new Date()));
+  } catch (e) {
+    el.textContent = &#x27;Failed to render moon.&#x27;;
+  }
+&lt;&#x2F;script&gt;
+&lt;h3 id=&quot;credit&quot;&gt;Credit&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aleyan&#x2F;ascii-side-of-the-moon&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;aleyan&#x2F;ascii-side-of-the-moon&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Obfuscated C cricle</title>
+        <published>2024-07-31T00:00:00+00:00</published>
+        <updated>2024-07-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.astrid-klipfel.fr/blog/c-circle/"/>
+        <id>https://blog.astrid-klipfel.fr/blog/c-circle/</id>
+        
+        <content type="html" xml:base="https://blog.astrid-klipfel.fr/blog/c-circle/">&lt;p&gt;The other day I remembered about the &lt;a rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;www.ioccc.org&#x2F;&quot;&gt;International Obfuscated C Code Contest&lt;&#x2F;a&gt;. I thought it would be fun to try, and I tried to make a circle-shaped code to display a circle in C.&lt;&#x2F;p&gt;
+&lt;p&gt;This is how I did it. First, I wrote a normal code to draw a circle in terminal. Then, after playing around with the radius of the circle, I drew a circle with roughly the area of the code I used to generate it. Finally, I rearranged my code to make it look like a sphere. This is what I ended up with:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code data-lang=&quot;c&quot;&gt;#include &amp;lt;stdlib.h&amp;gt;
+#include &amp;lt;stdio.h&amp;gt;
+#define RADIUS 6
+
+       int main()
+    {float r = RADIUS
+  ;for(float i = 0; i&amp;lt;
+ r*2 ; i++) { for(float
+j = 0 ; j &amp;lt; r*4 ; j++ ){
+float d = ((i - r + 0.5)
+*(i - r + 0.5) + 0.25 *(
+j- 2*r + 0.5) * (j - 2*r
+ +0.5 ) ) ; printf( d &amp;lt; 
+  r * r ? &amp;quot;#&amp;quot; : &amp;quot; &amp;quot;);} 
+    printf( &amp;quot;\n&amp;quot; );}
+       return 0;}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is a small demo of the code:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code data-lang=&quot;bash&quot;&gt;$ .&#x2F;circle
+       ##########       
+    ################    
+  ####################  
+ ###################### 
+########################
+########################
+########################
+########################
+ ###################### 
+  ####################  
+    ################    
+       ##########       
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This code is not worth posting on IOCCC, but the process of creating it was fun. It might be possible to generate arbitrary shaped code with a modified version of an ASCII cam, for example. I might look into this in the future...&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

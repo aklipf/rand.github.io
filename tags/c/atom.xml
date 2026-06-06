@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>rand() blog - C</title>
+    <link rel="self" type="application/atom+xml" href="https://blog.astrid-klipfel.fr/tags/c/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.astrid-klipfel.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-31T00:00:00+00:00</updated>
+    <id>https://blog.astrid-klipfel.fr/tags/c/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Obfuscated C cricle</title>
+        <published>2024-07-31T00:00:00+00:00</published>
+        <updated>2024-07-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.astrid-klipfel.fr/blog/c-circle/"/>
+        <id>https://blog.astrid-klipfel.fr/blog/c-circle/</id>
+        
+        <content type="html" xml:base="https://blog.astrid-klipfel.fr/blog/c-circle/">&lt;p&gt;The other day I remembered about the &lt;a rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;www.ioccc.org&#x2F;&quot;&gt;International Obfuscated C Code Contest&lt;&#x2F;a&gt;. I thought it would be fun to try, and I tried to make a circle-shaped code to display a circle in C.&lt;&#x2F;p&gt;
+&lt;p&gt;This is how I did it. First, I wrote a normal code to draw a circle in terminal. Then, after playing around with the radius of the circle, I drew a circle with roughly the area of the code I used to generate it. Finally, I rearranged my code to make it look like a sphere. This is what I ended up with:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code data-lang=&quot;c&quot;&gt;#include &amp;lt;stdlib.h&amp;gt;
+#include &amp;lt;stdio.h&amp;gt;
+#define RADIUS 6
+
+       int main()
+    {float r = RADIUS
+  ;for(float i = 0; i&amp;lt;
+ r*2 ; i++) { for(float
+j = 0 ; j &amp;lt; r*4 ; j++ ){
+float d = ((i - r + 0.5)
+*(i - r + 0.5) + 0.25 *(
+j- 2*r + 0.5) * (j - 2*r
+ +0.5 ) ) ; printf( d &amp;lt; 
+  r * r ? &amp;quot;#&amp;quot; : &amp;quot; &amp;quot;);} 
+    printf( &amp;quot;\n&amp;quot; );}
+       return 0;}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is a small demo of the code:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code data-lang=&quot;bash&quot;&gt;$ .&#x2F;circle
+       ##########       
+    ################    
+  ####################  
+ ###################### 
+########################
+########################
+########################
+########################
+ ###################### 
+  ####################  
+    ################    
+       ##########       
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This code is not worth posting on IOCCC, but the process of creating it was fun. It might be possible to generate arbitrary shaped code with a modified version of an ASCII cam, for example. I might look into this in the future...&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

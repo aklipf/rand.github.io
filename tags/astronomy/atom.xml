@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>rand() blog - astronomy</title>
+    <link rel="self" type="application/atom+xml" href="https://blog.astrid-klipfel.fr/tags/astronomy/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://blog.astrid-klipfel.fr"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-05-31T00:00:00+00:00</updated>
+    <id>https://blog.astrid-klipfel.fr/tags/astronomy/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Moon phase ASCII art</title>
+        <published>2026-05-31T00:00:00+00:00</published>
+        <updated>2026-05-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://blog.astrid-klipfel.fr/blog/ascii-moon/"/>
+        <id>https://blog.astrid-klipfel.fr/blog/ascii-moon/</id>
+        
+        <content type="html" xml:base="https://blog.astrid-klipfel.fr/blog/ascii-moon/">&lt;p&gt;I like astronomy and ASCII art and there is a perfect project that combines the two! Let&#x27;s introduce &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aleyan&#x2F;ascii-side-of-the-moon&quot;&gt;ascii-side-of-the-moon&lt;&#x2F;a&gt;, a cool project that allows you to render an ASCII representation of the current moon phase. Here is a short animation of the full cycle:&lt;&#x2F;p&gt;
+&lt;pre id=&quot;ascii-moon-anim&quot; style=&quot;font-size: 0.6em; line-height: 1.2; overflow: visible; white-space: pre;&quot;&gt;Loading...&lt;&#x2F;pre&gt;
+&lt;script type=&quot;module&quot;&gt;
+  import { getMoonState, renderMoon } from &#x27;https:&#x2F;&#x2F;esm.sh&#x2F;ascii-side-of-the-moon&#x27;;
+
+  const el = document.getElementById(&#x27;ascii-moon-anim&#x27;);
+  const FRAME_COUNT = 30;
+  const FRAME_MS = 150;
+  const LUNAR_CYCLE_MS = 29.5 * 24 * 60 * 60 * 1000;
+
+  const now = new Date();
+  const frames = Array.from({ length: FRAME_COUNT }, (_, i) =&gt; {
+    const date = new Date(now.getTime() + (i &#x2F; FRAME_COUNT) * LUNAR_CYCLE_MS);
+    return renderMoon(getMoonState(date));
+  });
+
+  el.textContent = frames[0];
+  let frame = 0;
+  setInterval(() =&gt; {
+    frame = (frame + 1) % frames.length;
+    el.textContent = frames[frame];
+  }, FRAME_MS);
+&lt;&#x2F;script&gt;
+&lt;h3 id=&quot;how-to-use-it&quot;&gt;How to use it?&lt;&#x2F;h3&gt;
+&lt;p&gt;In a bash terminal:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code data-lang=&quot;bash&quot;&gt;curl -s &amp;quot;https:&#x2F;&#x2F;aleyan.com&#x2F;projects&#x2F;ascii-side-of-the-moon&amp;quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Result:&lt;&#x2F;p&gt;
+&lt;pre id=&quot;ascii-moon&quot; style=&quot;font-size: 0.6em; line-height: 1.2; overflow: visible; white-space: pre;&quot;&gt;Loading...&lt;&#x2F;pre&gt;
+&lt;script type=&quot;module&quot;&gt;
+  import { getMoonState, renderMoon } from &#x27;https:&#x2F;&#x2F;esm.sh&#x2F;ascii-side-of-the-moon&#x27;;
+  const el = document.getElementById(&#x27;ascii-moon&#x27;);
+  try {
+    el.textContent = renderMoon(getMoonState(new Date()));
+  } catch (e) {
+    el.textContent = &#x27;Failed to render moon.&#x27;;
+  }
+&lt;&#x2F;script&gt;
+&lt;h3 id=&quot;credit&quot;&gt;Credit&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aleyan&#x2F;ascii-side-of-the-moon&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;aleyan&#x2F;ascii-side-of-the-moon&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

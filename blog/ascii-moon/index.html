@@ -1,0 +1,26 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="IE=edge" http-equiv=X-UA-Compatible><meta content="text/html; charset=UTF-8" http-equiv=content-type><meta content="width=device-width,initial-scale=1,user-scalable=no" name=viewport><meta content="index, follow" name=robots><title>Moon phase ASCII art</title><meta content="Moon phase ASCII art" name=title><meta content=Asteri name=author><meta content=website property=og:type><meta content=https://blog.astrid-klipfel.fr/blog/ascii-moon/ property=og:url><meta content="rand() blog" property=og:site_name><meta content="Moon phase ASCII art" property=og:title><meta content=summary_large_image property=twitter:card><meta content=https://blog.astrid-klipfel.fr/blog/ascii-moon/ property=twitter:url><meta content="Moon phase ASCII art" property=twitter:title><link href=https://blog.astrid-klipfel.fr/blog/ascii-moon/ rel=canonical><link href=https://speyll.github.io/suCSS/reset-min.css rel=stylesheet><link href=https://speyll.github.io/suCSS/suCSS-min.css rel=stylesheet><link href=https://blog.astrid-klipfel.fr/css/style.css rel=stylesheet><script defer src=https://blog.astrid-klipfel.fr/js/script.js></script><body><header><nav id=nav-bar><a href=/> /home/ </a><a href=/blog> /blog/ </a><a href=/about> /about/ </a><div><input id=theme-toggle style=display:none type=checkbox><label for=theme-toggle id=theme-toggle-label><svg class=icons id=theme-icon><use href=https://blog.astrid-klipfel.fr/icons.svg#lightMode></use></svg></label><audio id=theme-sound><source src=https://blog.astrid-klipfel.fr/click.ogg type=audio/ogg></audio></div></nav></header><main><div><a href=..>..</a>/<span class=accent-data>ascii-moon</span></div><time datetime=2026-05-31>Published on: <span class=accent-data>2026-05-31</span></time><address rel=author>By <span class=accent-data>Asteri</span></address><h1>Moon phase ASCII art</h1><p>I like astronomy and ASCII art and there is a perfect project that combines the two! Let's introduce <a href=https://github.com/aleyan/ascii-side-of-the-moon rel=external>ascii-side-of-the-moon</a>, a cool project that allows you to render an ASCII representation of the current moon phase. Here is a short animation of the full cycle:<pre id=ascii-moon-anim style=white-space:pre;font-size:.6em;line-height:1.2;overflow:visible>Loading...</pre><script type=module>import { getMoonState, renderMoon } from 'https://esm.sh/ascii-side-of-the-moon';
+
+  const el = document.getElementById('ascii-moon-anim');
+  const FRAME_COUNT = 30;
+  const FRAME_MS = 150;
+  const LUNAR_CYCLE_MS = 29.5 * 24 * 60 * 60 * 1000;
+
+  const now = new Date();
+  const frames = Array.from({ length: FRAME_COUNT }, (_, i) => {
+    const date = new Date(now.getTime() + (i / FRAME_COUNT) * LUNAR_CYCLE_MS);
+    return renderMoon(getMoonState(date));
+  });
+
+  el.textContent = frames[0];
+  let frame = 0;
+  setInterval(() => {
+    frame = (frame + 1) % frames.length;
+    el.textContent = frames[frame];
+  }, FRAME_MS);</script><h3 id=how-to-use-it>How to use it?</h3><p>In a bash terminal:<pre><code data-lang=bash>curl -s "https://aleyan.com/projects/ascii-side-of-the-moon"
+</code></pre><p>Result:<pre id=ascii-moon style=white-space:pre;font-size:.6em;line-height:1.2;overflow:visible>Loading...</pre><script type=module>import { getMoonState, renderMoon } from 'https://esm.sh/ascii-side-of-the-moon';
+  const el = document.getElementById('ascii-moon');
+  try {
+    el.textContent = renderMoon(getMoonState(new Date()));
+  } catch (e) {
+    el.textContent = 'Failed to render moon.';
+  }</script><h3 id=credit>Credit</h3><p><a href=https://github.com/aleyan/ascii-side-of-the-moon rel=external>https://github.com/aleyan/ascii-side-of-the-moon</a><p class=tags-data><a href=/tags/ascii-art>/ASCII art/</a> <a href=/tags/astronomy>/astronomy/</a></main><footer><hr><div id=footer-container><div><p>Theme and color theme licensed under <a rel="noopener noreferrer" href=https://en.wikipedia.org/wiki/Licence_MIT target=_blank>MIT</a>.<br> Built with <a rel="noopener noreferrer" href=https://www.getzola.org target=_blank>Zola</a> using <a rel="noopener noreferrer" href=https://github.com/Speyll/anemone target=_blank>anemone</a> theme, <a rel="noopener noreferrer" href=https://speyll.github.io/suCSS/ target=_blank>suCSS</a> framework & <a rel="noopener noreferrer" href=https://github.com/Speyll/veqev target=_blank>veqev</a>.<br></div></div></footer>
